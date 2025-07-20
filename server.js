@@ -4,7 +4,8 @@ import 'dotenv/config'
 
 const app = express()
 const port = 3000
-const connection = new Connection(process.env.DATABASE_URL)
+const url = 'postgresql://foodmananger_user:BNMMmEEOA2JdcwMba0sYtHf7y5QrTnzV@dpg-d1u7q9k9c44c73cn2fd0-a.oregon-postgres.render.com/foodmananger';
+const connection = new Connection(url)
 await connection.connect()
 
 app.set('view engine', 'ejs');
